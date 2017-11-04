@@ -6,4 +6,6 @@ TestWindow.swf  -->  res_mods/<WoT_Version>/gui/flash
   
 If you push F10 Key on Login Screen,Window works.  
   
-<b>Great step forward</b>  
+# Great step forward  
+  
+<b>References is on source.txt</b>  
