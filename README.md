@@ -1,4 +1,4 @@
-# Let-s-Make-GUI-on-WoT  
+# Let's Make GUI on WoT  
 You should compile mod_TestWindow.py to pyc  and Make swf File with TestWindow.as  
 
 mod_TestWindow.pyc  -->  res_mods/<WoT_Version>/scripts/client/gui/mods/  
