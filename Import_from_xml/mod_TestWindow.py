@@ -16,7 +16,7 @@ class TestWindow(AbstractWindowView):
             'title':self.__config_section.readString('title'),
             'width':self.__config_section.readString('width'),
             'height':self.__config_section.readString('height')
-
+        }
     def _populate(self):
         super(TestWindow, self)._populate()
 
