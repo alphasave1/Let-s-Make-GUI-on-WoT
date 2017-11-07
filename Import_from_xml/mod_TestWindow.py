@@ -2,20 +2,21 @@ from gui.Scaleform.framework import g_entitiesFactories, ViewSettings
 from gui.Scaleform.framework import ViewTypes, ScopeTemplates
 from gui.Scaleform.framework.entities.abstract.AbstractWindowView import AbstractWindowView
 from gui.app_loader import g_appLoader
+from gui import InputHandler
 from gui.Scaleform.framework.managers.loaders import ViewLoadParams
 from gui.shared.utils.key_mapping import getBigworldNameFromKey
-import ResMgr
+from ResMgr import openSection
 class TestWindow(AbstractWindowView):
 
     def __init__(self):
         super(TestWindow, self).__init__()
-        self.__config_section=ResMgr.openSection('../configs/config.xml')
+        # self.__config_section=openSection('../configs/config.xml')
 
     def py_getCustomConfig(self):
         return {
-            'title':self.__config_section.readString('title'),
-            'width':self.__config_section.readString('width'),
-            'height':self.__config_section.readString('height')
+            'title':'Test_Window',
+            'width':600,
+            'height':400
         }
     def _populate(self):
         super(TestWindow, self)._populate()
@@ -25,7 +26,7 @@ class TestWindow(AbstractWindowView):
 
 
 _alias = 'TestWindow'
-_url = 'TestWindow.swf'
+_url = 'TestWindow3.swf'
 _type = ViewTypes.WINDOW
 _event = None
 _scope = ScopeTemplates.VIEW_SCOPE
