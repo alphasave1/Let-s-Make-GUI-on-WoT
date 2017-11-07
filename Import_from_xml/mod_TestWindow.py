@@ -5,7 +5,7 @@ from gui.app_loader import g_appLoader
 from gui import InputHandler
 from gui.Scaleform.framework.managers.loaders import ViewLoadParams
 from gui.shared.utils.key_mapping import getBigworldNameFromKey
-from ResMgr import openSection
+#from ResMgr import openSection
 class TestWindow(AbstractWindowView):
 
     def __init__(self):
