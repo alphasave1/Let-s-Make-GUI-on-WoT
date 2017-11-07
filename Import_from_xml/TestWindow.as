@@ -1,10 +1,9 @@
 package
 {
-    import net.wg.infrastructure.base.AbstractWindowView;
-    public var py_getCustomConfig:Function;
-
+	import net.wg.infrastructure.base.AbstractWindowView;
     public class TestWindow extends AbstractWindowView
     {
+		public var py_getCustomConfig:Function;
         public function TestWindow()
         {
             super();
