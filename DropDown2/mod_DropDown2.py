@@ -10,7 +10,7 @@ class TestWindow(AbstractWindowView):
     def __init__(self):
         super(TestWindow, self).__init__()
 
-    def _LoadClick(self):
+    def _LoadClick(self,mapName):
         return
         print mapName
     def _populate(self):
