@@ -12,8 +12,10 @@ class TestWindow(AbstractWindowView):
 
     def py_log(self,mapName):
         print mapName
+        
     def _populate(self):
         super(TestWindow, self)._populate()
+        self.flashObjectt.as_setText()
 
     def onWindowClose(self):
         self.destroy()
