@@ -120,7 +120,7 @@ package
 				//rowCount:rows,
 				//scrollBar:scrBar,
 				dataProvider: dataProv
-				//selectedIndex: this.selected
+				//selectedIndex:0
 			})) as DropdownMenu;
 			//this.ddMenu.addEventListener(ListEvent.INDEX_CHANGE, this.ddMenuChange, false, 0, true);
             soundButtonLoad = addChild(App.utils.classFactory.getComponent("ButtonRed", SoundButton, {
@@ -140,14 +140,14 @@ package
             })) as SoundButton;
 			this.soundButtonCancel.addEventListener(MouseEvent.CLICK,this._CancelClick);
         }
-		public function ddMenuChange():void 
-		{
-			_loc3_ = this.ddMenu.dataProvider[this.ddMenu.selectedIndex];
-			mapName = _loc3_;
-		}
+		//public function ddMenuChange():void 
+		//{
+		//	_loc3_ = this.ddMenu.dataProvider[this.ddMenu.selectedIndex];
+		//	mapName = _loc3_;
+		//}
 		public function _LoadClick():void
 		{
-			//_loc3_ = this.ddMenu.dataProvider[this.ddMenu.selectedIndex];
+			_loc3_ = this.ddMenu.dataProvider[this.ddMenu.selectedIndex];
 			mapName = _loc3_;
 			//this.clickedLoad(this.ddMenu.selectedIndex);
 			this.onWindowClose();
