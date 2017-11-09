@@ -147,6 +147,7 @@ package
 		//}
 		public function _LoadClick():void
 		{
+py_log(this.ddMenu.selectedIndex);
 			_loc3_ = this.ddMenu.dataProvider[this.ddMenu.selectedIndex];
 			mapName = _loc3_;
 			//this.clickedLoad(this.ddMenu.selectedIndex);
