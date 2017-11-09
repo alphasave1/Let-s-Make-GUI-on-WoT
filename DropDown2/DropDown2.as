@@ -20,6 +20,7 @@ package
         private var textFieldTest		: TextField;
 		private var ddMenu				: DropdownMenu;
 		public var mapName : int;
+		public var py_log:Function;
 		//public var clickedLoad:Function = null;
 		
 
@@ -135,6 +136,10 @@ package
 		function _CancelClick():void 
 		{
 			this.onWindowClose();
+		}
+		function as_setText(param:String):void
+		{
+			py_log(mapName)
 		}
     }
 }
