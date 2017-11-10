@@ -20,13 +20,8 @@ package
         private var soundButtonCancel	: SoundButton;
         private var textFieldTest		: TextField;
 		private var ddMenu				: DropdownMenu;
-		private var mapNameTest			:TextField;
-		public var mapName : int;
-		public var mapName2:String;
+		public var mapName : String;
 		public var py_log:Function;
-		public var selected:int;
-		public var _loc3_:int;
-		//public var clickedLoad:Function;
 		
 
         public function Main()
@@ -102,14 +97,6 @@ package
             textFieldTest.defaultTextFormat = new TextFormat("$FieldFont", 20, 0xEA4517);
 			textFieldTest.text = "If You Select Map Name and Push 'Load' Button, it will load Map.";
 			addChild(textFieldTest);
-			//mapNameTest = new TextField();
-			//mapNameTest.width = 100;
-			//mapNameTest.height = 50;
-			//mapNameTest.x = 20;
-			//mapNameTest.y = 60;
-			//mapNameTest.defaultTextFormat = new TextFormat("$FieldFont", 15, 0xC2F702);
-			//mapNameTest.text = _loc4_;
-			//addChild(mapNameTest);
 			ddMenu = addChild(App.utils.classFactory.getComponent("DropdownMenuUI", DropdownMenu, {
 				x: 20,
 				y: 40,
@@ -122,7 +109,6 @@ package
 				dataProvider: dataProv
 				//selectedIndex:0
 			})) as DropdownMenu;
-			//this.ddMenu.addEventListener(ListEvent.INDEX_CHANGE, this.ddMenuChange, false, 0, true);
             soundButtonLoad = addChild(App.utils.classFactory.getComponent("ButtonRed", SoundButton, {
                 width: 100,
                 height: 25,
@@ -140,17 +126,10 @@ package
             })) as SoundButton;
 			this.soundButtonCancel.addEventListener(MouseEvent.CLICK,this._CancelClick);
         }
-		//public function ddMenuChange():void 
-		//{
-		//	_loc3_ = this.ddMenu.dataProvider[this.ddMenu.selectedIndex];
-		//	mapName = _loc3_;
-		//}
 		public function _LoadClick():void
 		{
-py_log(this.ddMenu.selectedIndex);
-			_loc3_ = this.ddMenu.dataProvider[this.ddMenu.selectedIndex];
-			mapName = _loc3_;
-			//this.clickedLoad(this.ddMenu.selectedIndex);
+			var _loc3_:* = this.ddMenu.dataProvider[this.ddMenu.selectedIndex];
+			this.mapName = _loc3_.data;
 			this.onWindowClose();
 		}
 		public function _CancelClick():void 
@@ -159,8 +138,7 @@ py_log(this.ddMenu.selectedIndex);
 		}
 		public function as_setText():void
 		{
-			py_log(mapName);
-			py_log(selected);
+			py_log(this.mapName);
 		}
     }
 }
